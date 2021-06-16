@@ -76,9 +76,20 @@ If you have any bugs or questions on how to use me head to @DevsChatRoom.
 async def _(event):
      await event.edit(HLP, buttons=kk) 
   
-@bot.on(events.NewMessage(pattern="^/help$"))
+@bot.on(events.NewMessage(pattern="/help"))
 async def _(event):
-     await event.edit(HLP, buttons=kk)
+   if not event.is_group:
+    await bot.send_message(event.chat.id,HLP, buttons=kk)
+   else:
+    await event.reply("**Click me for help!**", buttons=[[Button.url("Click me for help","t.me/Seona_Robot?start=help")]] , "**Support**", buttons=[[Button.url("Join Support","t.me/DevsChatroom")]])
+
+@bot.on(events.NewMessage(pattern="^/start help"))
+async def _(event):
+     await event.reply(HLP, buttons=kk)
+
+@bot.on(events.callbackquery.CallbackQuery(data="help"))
+async def _(event):
+     await event.reply(HLP, button=kk)
 
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"contut"))) 
 async def _(event):
