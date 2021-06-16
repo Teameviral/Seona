@@ -1,4 +1,4 @@
-#Made By Hunter
+# Made By Hunter
 # Scammer Devil
 
 from telethon import events, Button, custom
@@ -345,7 +345,7 @@ async def _(event):
 - /kick: kicks a user
 - /kickme: Kicks you''',buttons=warn)
 
-warn = [[custom.Button.inline("Admin Commands", data="wac"), custom.Button.inline("User Commands", data="ucmds")]]
+warn = [[custom.Button.inline("Admin Commands", data="ban_kk"), custom.Button.inline("User Commands", data="ucmds")]]
 warn += [[custom.Button.inline("Warn Actions", data="actwar"),custom.Button.inline("Warn Limits", data="litwar")]]
 warn += [[custom.Button.inline("Back", data="BCK")]]
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"muta")))
