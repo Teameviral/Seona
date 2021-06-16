@@ -81,7 +81,7 @@ async def _(event):
    if not event.is_group:
     await bot.send_message(event.chat.id,HLP, buttons=kk)
    else:
-    await event.reply("**Click me for help!**", buttons=[[Button.url("Click me for help","t.me/Seona_Robot?start=help")]] , "**Support**", buttons=[[Button.url("Join Support","t.me/DevsChatroom")]])
+    await event.reply("**Click me for help!**", buttons=[[Button.url("Click me for help","t.me/Seona_Robot?start=help")]], "**Support**", buttons=[[Button.url("Join Support","t.me/DevsChatroom")]])
 
 @bot.on(events.NewMessage(pattern="^/start help"))
 async def _(event):
