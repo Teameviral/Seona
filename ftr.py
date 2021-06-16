@@ -66,7 +66,6 @@ Join my news channel to get information on all the latest updates.'''
 HLP = '''Here is the list of all possible commands:
 - /start: Starts me! You've probably already used this.
 - /help: Sends this message; I'll tell you more about myself!
-- /donate: Gives you info on how to support me and my creator.
 
 If you have any bugs or questions on how to use me head to @DevsChatRoom.
  All commands can be used with the following: / ? !'''
@@ -121,7 +120,7 @@ async def _(event):
 Excellent!
 Now the Bot is ready to use!
 
-All commands can be used with / ? or !
+All commands can be used with /
 
 Note: I recognise only the admins cached in my /admincache so as to avoid sending too many requests to the Telegram's servers. The admin cache will be updated every 10 minutes or upon executing /admincache command.''', buttons=kk) 
 
@@ -137,7 +136,7 @@ kk += [[custom.Button.inline("Disabling", data="disable"), custom.Button.inline(
 kk += [[custom.Button.inline("Greetings", data="welcome"), custom.Button.inline("Locks", data="locks"), custom.Button.inline("Logger", data="logger")]]
 kk += [[custom.Button.inline("MarkDown", data="markdown"), custom.Button.inline("Misc", data="misc"), custom.Button.inline("Notes", data="notes")]]
 kk += [[custom.Button.inline("Pin", data="pin"), custom.Button.inline("Purges", data="purges"), custom.Button.inline("Reporting", data="report")]]
-kk += [[custom.Button.inline("Back To Chutilia Home", data="ohk")]]
+kk += [[custom.Button.inline("Back", data="suru")]]
 
 
 
