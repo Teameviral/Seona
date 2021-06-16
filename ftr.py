@@ -1,3 +1,6 @@
+#Made By Hunter
+# Scammer Devil
+
 from telethon import events, Button, custom
 import re, os, random, asyncio
  
@@ -14,7 +17,7 @@ bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
 # Start Text 
 LSTART = f'''Hello, nice to meet you!
 
-I'm Chutilia, a full-fledged group management bot built to help you manage your group easily.
+I'm Seona, an advanced group management bot built to help you manage your group easily.
 
 I can do a lot of cool stuffs, here's a short list:
 • I can restrict users.
@@ -28,8 +31,6 @@ I can do a lot of cool stuffs, here's a short list:
 All of the possible commands can be used properly if I am an administrator in your group otherwise, I will not able to restrict users, send certain predefined actions etc.
 
 Join my news channel to get information on all the latest updates.'''
- 
-# Help Menu Made by Devil. 
 
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"suru"))) 
 async def _(event):
@@ -38,15 +39,15 @@ async def _(event):
 ohk = [[custom.Button.inline("Back", data="suru")]]
 
 start = [[custom.Button.inline("Configuration Tutorial", data="contut"), custom.Button.inline("Commands", data="command")]]
-start += [[custom.Button.url("Add me to your group", "t.me/AlitaRoBot?=start")]]
+start += [[custom.Button.url("Add me to your group", "t.me/Seona_RoBot?=start")]]
 
 
 
-@bot.on(events.NewMessage(pattern="^/skem$"))
+@bot.on(events.NewMessage(pattern="^/start$"))
 async def _(event):
       START = f'''Hello {event.sender.first_name}, nice to meet you!
 
-I'm Chutilia, a full-fledged group management bot built to help you manage your group easily.
+I'm Seona, an advanced group management bot built to help you manage your group easily.
 
 I can do a lot of cool stuffs, here's a short list:
 • I can restrict users.
@@ -67,19 +68,23 @@ HLP = '''Here is the list of all possible commands:
 - /help: Sends this message; I'll tell you more about myself!
 - /donate: Gives you info on how to support me and my creator.
 
-If you have any bugs or questions on how to use me head to @SkyNoidHelp.
+If you have any bugs or questions on how to use me head to @DevsChatRoom.
  All commands can be used with the following: / ? !'''
 
 
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"command"))) 
 async def _(event):
      await event.edit(HLP, buttons=kk) 
+  
+@bot.on(events.NewMessage(pattern="^/help$"))
+async def _(event):
+     await event.edit(HLP, buttons=kk)
 
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"contut"))) 
 async def _(event):
-    await event.edit('''**Welcome to the Chutilia configuration tutorial.**
+    await event.edit('''**Welcome to the Seona configuration tutorial.**
 
-The first thing to do is to add Emilia to your group! For doing that, press the under button and select your group, then press "Done" to continue the tutorial..''', buttons=kk) 
+The first thing to do is to add Seona to your group! For doing that, press the under button and select your group, then press "Done" to continue the tutorial..''', buttons=kk) 
 
 done = [[custom.Button.inline("✅ Done", data="done")]]
 
@@ -96,7 +101,7 @@ To do that, follow this easy steps:
 ▫️ Press on Administrator
 ▫️ Press Add Administrator
 ▫️ Press the Magnifying Glass
-▫️ Search @AlitaRoBot
+▫️ Search @Seona_Robot
 ▫️ Confirm''', buttons=kk) 
 
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"sed")))
